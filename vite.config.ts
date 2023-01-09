@@ -5,4 +5,12 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
 	// ...other config settings
 	plugins: [react(), nodePolyfills()],
+	optimizeDeps: {
+		disabled: false,
+	},
+	build: {
+		commonjsOptions: {
+			include: [],
+		},
+	},
 });
